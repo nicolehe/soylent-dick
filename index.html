@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>soylent dick</title>
+        <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+        <style>
+        body {
+            margin: 0;
+            font-family: 'Arvo';
+            color: #000000;
+            background-color: #F7F4D5;
+            font-size: 26pt;
+            background-image: url("http://nicole.pizza/img/soylent.jpg");
+            background-repeat: repeat;
+        }
+        
+        h1 {
+            font-size: 20pt;
+            padding: 10px;
+            color: #5F6263;
+            text-align: center;
+        }
+        
+        div.center {
+            width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: auto;
+        }
+        
+        div.top {
+            width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+        }
+        
+        textarea {
+            font-size: 16pt;
+            width: 500px;
+            height: 200px;
+        }
+        </style>
+        <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script type="text/javascript">
+        var socket = io.connect('http://localhost:8080/');
+        var line;
+        var strings = [
+            'The powder I now behold is more than meets the eye.',
+            'Free your body.',
+            'This mix of mass, energy, and information is the staple food of the future.',
+            'Refined, robust, and efficient, Soylent is food that works.',
+            'Soylent would not be here if not for me.',
+            'I am a vital member of the network that transformed Soylent from information to matter.',
+            'I am a vital member of the network that transformed Soylent from idea to flesh.',
+            'My contribution and support make me an integral part of Soylent.',
+            'I will remember every sip of Soylent is a tiny gratuity toward producing food ephemerally.',
+            'I will remember that every sip of Soylent is a tiny gratuity toward reducing health disparity.',
+            'I will remember that every sip of Soylent is a tiny gratuity toward answering questions about our food and ourselves that have gone unanswered for too long.',
+            'If I am what I eat I may now consider myself healthy and practical.',
+            'Soylent, like life itself, is in a continual state of change and improvement.'
+        ];
+
+        function submit() {
+            var x = document.getElementById("myText").value;
+            console.log(line);
+
+            if (x === line) {
+                socket.emit('data', 0);
+                callString();
+            } else {
+                callString();
+                alert("Incorrect. Do it again, but better.");
+            }
+        }
+
+        function callString() {
+            line = strings[Math.floor((Math.random() * strings.length))];
+            $('#soylentText').text(line);
+        }
+        </script>
+</head>
+
+<body onload="callString()">
+    <div id="intro" class="top">
+        <h1>Please type the following text into the box to get what you deserve.</h1>
+    </div>
+    </div>
+    <div id="soylentText" class="center">
+    </div>
+    <div id="enterText" class="center">
+        <textarea type="text" id="myText"></textarea>
+        <p>
+            <button onclick="submit()">I am ready</button>
+        </p>
+    </div>
+</body>
+
+</html>
