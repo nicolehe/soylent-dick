@@ -1,6 +1,7 @@
 #Soylent Flesh Recipe 
-##(adapted from [PBS play-doh recipe](http://www.pbs.org/parents/crafts-for-kids/no-bake-play-dough/))
+(adapted from [PBS play-doh recipe](http://www.pbs.org/parents/crafts-for-kids/no-bake-play-dough/))
 
+###Ingredients:
 6 parts Soylent powder
 
 1 part water
@@ -10,7 +11,7 @@
 2-4 tablespoons of oil
 
 
-##Instructions:
+###Instructions:
 1. Pour water into large mixing bowl
 
 2. Mix in dry ingredients
