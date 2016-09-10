@@ -1,0 +1,27 @@
+{
+  "name": "soylent-dick",
+  "version": "1.0.0",
+  "description": "![](http://nicole.pizza/img/soylent-dick-nicole.gif)",
+  "main": "server.js",
+  "dependencies": {
+    "serialport": "^2.0.6",
+    "fs": "^0.0.2",
+    "socket.io": "^1.4.5",
+    "ws": "^1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicolehe/soylent-dick.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicolehe/soylent-dick/issues"
+  },
+  "homepage": "https://github.com/nicolehe/soylent-dick#readme"
+}
